@@ -1,32 +1,83 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Edu Sustentável - Home</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu Sustentável - Plataforma Educacional Verde</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/general.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/general.css') }}">
+    <header>
+        <nav>
+            <div class="logo">Edu Sustentável</div>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#sobre">Contato</a></li>
+                <li><a href="{{ route('dashboard') }}">Painel do Aluno</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
 
-        <!-- Fontes (Google) -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Aprenda a Salvar o Planeta.</h1>
+                <p>Cursos online e interativos sobre sustentabilidade, energias renováveis e ecologia.</p>
+                <a href="{{ route('dashboard') }}" class="cta-button">Comece a Aprender Hoje</a>
+            </div>
+            </section>
 
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body>
-        @include('layouts.home.home_header')
+        <section id="features" class="features">
+            <h2>Por Que Escolher a Edu Sustentável?</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Conteúdo de Qualidade</h3>
+                    <p>Materiais criados por especialistas em ciências ambientais.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Acesso Flexível</h3>
+                    <p>Estude no seu próprio ritmo, de qualquer lugar e dispositivo.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Comunidade Verde</h3>
+                    <p>Conecte-se com outros apaixonados por sustentabilidade.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        @include('layouts.home.home_footer')
+    <footer>
+        <p>&copy; 2025 Edu Sustentável. Educação para um futuro sustentável.</p>
+    </footer>
 
-        <!-- Links Bootstrap e Icons -->
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 
-        <script src="{{ asset('js/home.js') }}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+    <script>
+        // Funcao da responsividade com menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navList = document.querySelector('nav ul');
+
+            function toggleMenu() {
+                navList.classList.toggle('active');
+            }
+
+            menuToggle.addEventListener('click', toggleMenu);
+
+            navList.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navList.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
+        });
+        // FIM
+    </script>
+</body>
 </html>
