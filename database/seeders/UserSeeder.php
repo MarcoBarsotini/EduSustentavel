@@ -9,6 +9,6 @@ use App\Models\User;
 class UserSeeder extends Seeder
 {
     public function run() {
-        User::factory()->count(30)->create();
+        User::factory()->count(4)->create();
     }
 }

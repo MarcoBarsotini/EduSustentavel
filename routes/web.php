@@ -11,6 +11,10 @@ use App\Http\Controllers\TermosController;
 use App\Http\Controllers\Mail\ContactController;
 use App\Http\Controllers\Public\PublicUserController;
 
+// Controlers das Licoes
+use App\Http\Controllers\LessonController;
+use App\Http\Controllers\ModuleController;
+
 //admin
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminUserController;
@@ -49,6 +53,10 @@ Route::middleware('auth')->group(function () {
 
     //Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // Cursos e Licoes
+    Route::get('/lessons/{lesson}', [LessonController::class, 'show'])->name('lessons.show');
+    Route::get('/modules/{id}', [ModuleController::class, 'show'])->name('modules.show');
 
     //Contato
     Route::get('/contato', function () {
