@@ -1,7 +1,7 @@
 
-# Fast Cateen
+# Educação Sustentavel
 
-Segundo protótipo criado para o projeto de vendas online para cantinas. 
+Plataforma de ensino sustentavel para o projeto da materia modelagem e Padroes de projetos
 
 
 ## Deploy
