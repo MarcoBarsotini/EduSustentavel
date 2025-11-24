@@ -16,5 +16,12 @@ class LessonSeeder extends Seeder {
             'video_url' => 'http://localhost/edusustentavel/video1.mp4',
             'order' => 1,
         ]);
+        Lesson::create([
+            'module_id' => 2,
+            'title' => 'Primeira Aula',
+            'description' => 'Como criar um sistema do zero.',
+            'video_url' => 'http://localhost/edusustentavel/video2.mp4',
+            'order' => 1,
+        ]);
     }
 }

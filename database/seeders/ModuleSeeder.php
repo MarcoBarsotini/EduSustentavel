@@ -14,5 +14,10 @@ class ModuleSeeder extends Seeder {
             'title' => 'Módulo 1: Introdução',
             'order' => 1,
         ]);
+        Module::create([
+            'course_id' => 2,
+            'title' => 'Módulo 2: Primeiras Aulas',
+            'order' => 2,
+        ]);
     }
 }

@@ -30,6 +30,11 @@
             <div class="text-center mt-4">
                 <h4 class="text-white font_150">Você está no Dashboard!</h4>
                 <span class="font_80 text-white">O que deseja fazer?</span>
+                <div class="mt-6 flex justify-center gap-3">
+                    <a href="{{ route('modules.index') }}" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                        Meus Módulos
+                    </a>
+                </div>
             </div>
         </div>
     </div>

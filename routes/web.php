@@ -56,6 +56,7 @@ Route::middleware('auth')->group(function () {
 
     // Cursos e Licoes
     Route::get('/lessons/{lesson}', [LessonController::class, 'show'])->name('lessons.show');
+    Route::get('/modules', [ModuleController::class, 'index'])->name('modules.index');
     Route::get('/modules/{id}', [ModuleController::class, 'show'])->name('modules.show');
 
     //Contato
