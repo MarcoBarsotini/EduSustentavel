@@ -35,7 +35,7 @@ class AdminUserController extends Controller {
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,' . $id,
-            'user_type' => 'required|string|in:comum,funcionario',
+            'user_type' => 'required|string|in:comum,funcionario,aluno',
             'user_class' => 'required|string|in:nada,suporte,financeiro',
             'CLIENTE_DATA_NASC' => 'required|date_format:d/m/Y',
             'CLIENTE_TEL' => 'required|string|max:16|unique:users,CLIENTE_TEL,' . $id,

@@ -131,7 +131,7 @@
                     <input type="file" name="profile_photo" id="profile_photo" accept="image/*" class="upload-input hidden" onchange="displayImageName(this)">
                     <span id="file-name" class="file-name"></span>
                 </div>
-                <button type="submit" class="glow-on-hover">Salvar Foto</button>
+                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Salvar Foto</button>
             </form>
         </div>
     </div>

@@ -43,6 +43,7 @@
                             <select name="user_type" id="user_type" class="bg-inputblue text-white rounded block mt-1 w-full">
                                 <option value="comum" {{ $user->user_type == 'comum' ? 'selected' : '' }}>Comum</option>
                                 <option value="funcionario" {{ $user->user_type == 'funcionario' ? 'selected' : '' }}>Funcionário</option>
+                                <option value="aluno" {{ $user->user_type == 'aluno' ? 'selected' : '' }}>Aluno</option>
                             </select>
                         @error('user_type')
                             <span class="text-red-500 text-sm">{{ $message }}</span>
